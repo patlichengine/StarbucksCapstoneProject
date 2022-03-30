@@ -25,6 +25,29 @@ In order to achieve this Starbucks provided simulated data from a certain popula
    - transcript.json: Event log (306648 events x 4 fields): person: (string/hash), 
      event: (string) offer received, offer viewed, transaction, offer completed, value: (dictionary) different values depending on event type, offer id: (string/hash) not associated with any “transaction”, amount: (numeric) money spent in “transaction”, reward: (numeric) money gained from “offer completed” and time: (numeric) hours after start of test
 
+### Problem Statement
+The task I am faced with is to combine transaction, demographic and offer data to determine which demographic groups respond best to which offer type. The data set provided for this project is a simplified version of the real Starbucks app because the underlying simulator only has one product whereas Starbucks actually sells dozens of products.
+
+Every offer has a validity period before the offer expires. As an example, a BOGO offer might be valid for only 5 days. You'll see in the data set that informational offers have a validity period even though these ads are merely providing information about a product; for example, if an informational offer has 7 days of validity, you can assume the customer is feeling the influence of the offer for 7 days after receiving the advertisement.
+
+### Project Metric
+The most suitable algorthim I used was the tuned Logistic Regression with GridSearchCV algorithm to evaluate the two chosen metric the Accuracy and F1 Score.
+
+### Problem Strategy
+The following approached were used in solving the problem in the project: 
+- Data Cleaning: cleaning of each dataset and converting categorical variables into dummy/indicator variables 
+- Data Exploration: I used descriptive statistics to get more understanding of the data using the mean, standard deviation. median etc. 
+- Data Visualization using charts.
+- Application of Models
+- Extraction of features (quantitative data) and target for use in the models
+- Preprocessing the data using scikit learn libraries.
+- Estimation of training and test data using train_test_split of the scikit learn method
+- Scaling the numerical features.
+- Model prediction using Scikit learn
+- Model Evaluation using the Accuracy and F1 Score as a chosen metric
+- Model tuning using Logistic Regression with GridSearchCV to improve the performance of the models and estimate the values of the Accuracy and F1 Score.
+
+
 ### Appreciation
 I want to appreciate Udacity and Starbucks for providing the data used for this project.
 
